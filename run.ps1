@@ -1,4 +1,4 @@
-$csv = foreach ($i in (Get-Content C:\Users\abrubeck\Downloads\HarborGrief\365JustUPNs-Test.csv)) {
+$csv = foreach ($i in (Get-Content C:\temp\UPNs.csv)) {
 
     # Grab user properties and generate id
     $user = Get-MgUser -UserId $i -Property "UserPrincipalName,AccountEnabled,onPremisesExtensionAttributes,SynchronizationDetails,Id"
